@@ -1,34 +1,463 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<title>Web 1920 – 1</title>
-<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="Web_1920___1.css"/>
-<link href="https://fonts.googleapis.com/css?family=Montserrat:300&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <style>
+    canvas {
+      display: block;
+      vertical-align: bottom;
+      position: fixed;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #1B1B1B;
+      z-index: -50;
+    }
+  </style>
+  <!-- ^^^^Particle -->
+  <!-- If IE use the latest rendering engine -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Set the page to the width of the device and set the zoon level -->
+  <meta name="viewport" content="width = device-width, initial-scale = 1">
+  <title>Bootstrap Tutorial</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+  <style>
+    .jumbotron {
+      background-color: #fafafa;
+      color: black;
+      border-left: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      border-top: 1px solid #ddd;
+      padding: 15px;
+    }
+
+    .navbar-default {
+      background-color: #fafafa;
+    }
+
+    /* Adds borders for tabs */
+
+    .tab-content {
+      border-left: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      padding: 10px;
+    }
+
+    .nav-tabs {
+      margin-bottom: 0;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+  </style>
 
 </head>
+
 <body>
-<div id="Web_1920___1">
-	<div id="Final___logo2">
-		<svg class="Final___logo2_A0_Rectangle_1">
-			<pattern elementId="Final___logo2_A0_Rectangle_2" id="Final___logo2_A0_Rectangle_2_pattern" x="0" y="0" width="100%" height="100%">
-				<image x="0" y="0" width="100%" height="100%" href="Final___logo2_A0_Rectangle_2_pattern.png" xlink:href="Final___logo2_A0_Rectangle_2_pattern.png"></image>
-			</pattern>
-			<rect id="Final___logo2_A0_Rectangle_1" rx="0" ry="0" x="0" y="0" width="81" height="64">
-			</rect>
-		</svg>
-	</div>
-	<svg class="robot2">
-		<pattern elementId="robot2_A0_Rectangle_4" id="robot2_A0_Rectangle_4_pattern" x="0" y="0" width="100%" height="100%">
-			<image x="0" y="0" width="100%" height="100%" href="robot2_A0_Rectangle_4_pattern.png" xlink:href="robot2_A0_Rectangle_4_pattern.png"></image>
-		</pattern>
-		<rect id="robot2" rx="0" ry="0" x="0" y="0" width="719" height="560">
-		</rect>
-	</svg>
-	<div id="Coming_soon_">
-		<span>Coming soon<br/></span>
-	</div>
-</div>
+  <div id="particles-js" class="particles-container particles-js">
+    <canvas class="particles-js-canvas-el" width="1206" height="1037" style="width: 100%; height: 100%;"></canvas>
+  </div>
+
+
+  <!-- CONTAINERS -->
+  <!-- container puts padding around itself while container-fluid fills the whole screen. Bootstap grids require a container. -->
+  <div class="container">
+      <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+              </button>
+              <a class="navbar-brand" href="#">AIFIN</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li><a href="#">Coming Soon</a></li>
+  
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+  </div>
+
+  <br>
+
+  <div class="container">
+    <div class="media">
+
+      <!-- You can use media-top, media-middle, or media-bottom -->
+      <div class="media-right media-middle">
+        <img style="
+        max-width: 500px;
+        height: auto;
+        " id="img1" src="img/robot2.png" align="middle" hspace="12" vspace="20">
+      </div>
+      <div class="media-body" style="text-align:center;">
+        <br>
+        <br>
+        <br>
+        <div class="hidden-xs hidden-sm">
+          <br>
+          <br>
+          <br>
+          <br>
+        </div>
+        <h2 class="media-heading" style="color: #ffffff;font-weight: 100;">
+          投資，從此不一樣
+        </h2>
+        <p>
+          <br>
+          <button class="btn btn-outline-primary btn-lg" id="slogan1" style="
+          color: #ffffff;
+          border-color:#ffffff;
+          background-color: rgba(1,1,1,0);
+          border-width: 1.5px;
+          ">
+
+            <h4 style="font-weight: 100">智能。簡單。快速</h4>
+          </button>
+
+        </p>
+
+      </div>
+    </div>
+    <div class="media">
+
+      <!-- You can use media-top, media-middle, or media-bottom -->
+
+      <div class="media-body" style="text-align:center;">
+        <br>
+
+        <div class="hidden-xs">
+          <br>
+          <br>
+        </div>
+        <h2 class="media-heading" style="font-weight: 100">
+            <div class="visible-xs"><br></div>
+          不管從上從下，從效率到風險管理，
+          <div class="hidden-xs"></div>AI都是很有貢獻的。
+        </h2>
+        <p>
+          <h4 style="font-weight: 100;">-TNG市場總監 湛家揚
+            <br>
+            <br>
+            <br>
+          </h4>
+        </p>
+
+      </div>
+      <div class="media-right media-middle">
+        <img id="img2" src="img/chartpanel2.png" style="
+        max-width: 270px;
+        height: auto;
+        " class="img" align="middle" hspace="5" vspace="20">
+      </div>
+
+    </div>
+
+
+    <div class="media">
+
+      <!-- You can use media-top, media-middle, or media-bottom -->
+      <div class="media-right media-middle">
+        <img style="
+        max-width: 250px;
+        height: auto;
+        " id="img1" src="img/robot3.png" width="250" height="250" align="middle" hspace="20" hspace="20" vspace="20">
+      </div>
+      <div class="media-body" style="text-align:center;">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="hidden-xs">
+
+          <br>
+          <br>
+        </div>
+        <h2 class="media-heading" style="font-weight: 100">
+          我們使用了機器學習，在分析大量數據時，進行各種預測。
+        </h2>
+        <p>
+          <h4 style="font-weight: 100;">-世上最富有的數學家、量化投資者 James Simons
+            <br>
+            <br>
+            <br>
+          </h4>
+        </p>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      color: #ffffff
+    }
+
+    .thumbnail {
+      background: #3C3C3E;
+      border: 0;
+    }
+
+    @media only screen and (max-width: 99900px) {
+      #img1 {
+        width: 500px;
+      }
+      #img2 {
+        width: 270px;
+      }
+      #slogan1 {
+        padding: 20px;
+      }
+    }
+
+    @media only screen and (max-width: 1200px) {
+      #img1 {
+        width: 400px;
+      }
+      #img2 {
+        width: 270px;
+      }
+      #slogan1 {
+        padding: 20px;
+      }
+    }
+
+    @media only screen and (max-width: 992px) {
+      #img1 {
+        width: 300px;
+      }
+      #img2 {
+        width: 220px;
+      }
+      #slogan1 {
+        padding: 15px;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      #img1 {
+        width: 250px;
+      }
+      #img2 {
+        width: 200px;
+      }
+      h2 {
+        font-size: 21px;
+      }
+      h4 {
+        font-size: 16px;
+      }
+      #slogan1 {
+        padding: 15px;
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      #img1 {
+        width: 96px;
+      }
+      #img2 {
+        width: 180px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      h4 {
+        font-size: 12px;
+      }
+      #slogan1 {
+        padding: 10px;
+      }
+    }
+
+    @media only screen and (max-width: 320px) {
+      #img1 {
+        width: 64px;
+      }
+      #img2 {
+        width: 150px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      h4 {
+        font-size: 12px;
+      }
+      #slogan1 {
+        padding: 5px;
+      }
+    }
+  </style>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+
+  <script src="particles/particles.min.js"></script>
+  <script id="rendered-js">
+    // ParticlesJS Config.
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 100,
+          "density": {
+            "enable": true,
+            "value_area": 700
+          }
+        },
+
+
+        "color": {
+          "value": "#ffffff"
+        },
+
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+
+          "polygon": {
+            "nb_sides": 5
+          }
+        },
+
+
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+
+
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+
+
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+
+
+
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "grab"
+          },
+
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+
+          "resize": true
+        },
+
+        "modes": {
+          "grab": {
+            "distance": 140,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+
+
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+
+          "push": {
+            "particles_nb": 4
+          },
+
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+
+
+
+      "retina_detect": true
+    });
+      //# sourceURL=pen.js
+  </script>
 </body>
+
 </html>
