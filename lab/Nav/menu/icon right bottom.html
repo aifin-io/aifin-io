@@ -29,7 +29,7 @@ body {
   font-size: 20px;
   color: #818181;
   display: block;
-  transition: 0.5s;
+
 }
 
 .sidenav a:hover {
@@ -37,9 +37,10 @@ body {
 }
 
 .sidenav .closebtn {
-  position: absolute;
-  bottom: 26px;
-  right: 6px;
+  visibility: hidden;
+  position: fixed;
+  bottom: 15px;
+  right: 24px;
   font-size: 40px;
   margin-left: 50px;
 }
@@ -85,9 +86,9 @@ body {
   <a href="#">Contact</a>
   <a href="#">Contact</a>
   <a href="#">Contact</a>
-  <a href="#">Contact</a>
+  <a href="#1">Contact</a>
   
-  <a href="#">End</a>
+  <a href="#end">End</a>
   <br>
 </div>
 
@@ -116,10 +117,14 @@ color:white;
 <script>
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
+  document.getElementsByClassName("closebtn")[0].style.visibility = "visible";
+  
 }
 
 function closeNav() {
+  document.getElementsByClassName("closebtn")[0].style.visibility = "hidden";
   document.getElementById("mySidenav").style.width = "0";
+  
 }
 </script>
    
