@@ -7,6 +7,7 @@
   <style>
     body {
       font-family: "Lato", sans-serif;
+
     }
 
     .sidenav {
@@ -21,7 +22,7 @@
       overflow-x: hidden;
       overflow-y: auto;
       height: 100%;
-      transition: 0.1s;
+      transition: 0.2s;
 
     }
 
@@ -81,12 +82,26 @@
       left: 80px;
       position: absolute;
     }
+
+    .left-blur {
+
+      position: fixed;
+      left: 0px;
+      width: 0;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0);
+      
+
+    }
   </style>
 </head>
 
 <body>
 
   <div id="mySidenav" class="sidenav">
+    <a style="padding: 0;" href="javascript:void(0)" onclick="closeNav()">
+      <div class="left-blur"></div>
+    </a>
     <div style="
   background: #0078F6;
   height: 100px;
@@ -153,34 +168,56 @@ color:white;
     <center>
       <h1>Daily Design</h1><br><br>
       <div style="width:100%;max-width: 700px;">
-      <img src="img/pic1.PNG" style="width:100%;max-width: 700px;" ><br>
-      "Beautiful" is a song recorded by American singer Christina Aguilera for her fourth studio album, Stripped (2002).
-      It was released as the album's second single on 2002. A pop and R&B ballad, "Beautiful" was written and produced
-      by Linda Perry. Lyrically, it discusses inner beauty, as well as self-esteem and insecurity issues. Aguilera
-      commented that she put "her heart and her soul" into the track, which she felt represented the theme of Stripped.
-      The song was later re-recorded in an electronic style, titled You Are What You Are (Beautiful), for her first
-      greatest hits album Keeps Gettin' Better: A Decade of Hits (2008).
-      "Beautiful" is a song recorded by American singer Christina Aguilera for her fourth studio album, Stripped (2002).
-      It was released as the album's second single on 2002. A pop and R&B ballad, "Beautiful" was written and produced
-      by Linda Perry. Lyrically, it discusses inner beauty, as well as self-esteem and insecurity issues. Aguilera
-      commented that she put "her heart and her soul" into the track, which she felt represented the theme of Stripped.
-      The song was later re-recorded in an electronic style, titled You Are What You Are (Beautiful), for her first
-      greatest hits album Keeps Gettin' Better: A Decade of Hits (2008).</div>
+        <img src="img/pic1.PNG" style="width:100%;max-width: 700px;"><br>
+        "Beautiful" is a song recorded by American singer Christina Aguilera for her fourth studio album, Stripped
+        (2002).
+        It was released as the album's second single on 2002. A pop and R&B ballad, "Beautiful" was written and produced
+        by Linda Perry. Lyrically, it discusses inner beauty, as well as self-esteem and insecurity issues. Aguilera
+        commented that she put "her heart and her soul" into the track, which she felt represented the theme of
+        Stripped.
+        The song was later re-recorded in an electronic style, titled You Are What You Are (Beautiful), for her first
+        greatest hits album Keeps Gettin' Better: A Decade of Hits (2008).
+        "Beautiful" is a song recorded by American singer Christina Aguilera for her fourth studio album, Stripped
+        (2002).
+        It was released as the album's second single on 2002. A pop and R&B ballad, "Beautiful" was written and produced
+        by Linda Perry. Lyrically, it discusses inner beauty, as well as self-esteem and insecurity issues. Aguilera
+        commented that she put "her heart and her soul" into the track, which she felt represented the theme of
+        Stripped.
+        The song was later re-recorded in an electronic style, titled You Are What You Are (Beautiful), for her first
+        greatest hits album Keeps Gettin' Better: A Decade of Hits (2008).</div>
     </center>
   </div>
 
 
   <script>
+
+    var NavState = 0;//0 close 1 open
+    var nav_width = 300;
+    setInterval(updateWinWidth, 10);
+    var WinWidth = 0;
+
+    function updateWinWidth() {
+      WinWidth = window.innerWidth;
+      if (NavState == 0)
+        document.getElementsByClassName("left-blur")[0].style.width = "0";
+      else
+        document.getElementsByClassName("left-blur")[0].style.width = (WinWidth - nav_width - 17) + "px";
+    }
+
+
     function openNav() {
-      document.getElementById("mySidenav").style.width = "300px";
+
+      document.getElementById("mySidenav").style.width = nav_width + "px";
       document.getElementsByClassName("closebtn")[0].style.visibility = "visible";
+      document.getElementsByClassName("left-blur")[0].style.width = (WinWidth - nav_width) + "px";
+      NavState = 1;
 
     }
 
     function closeNav() {
       document.getElementsByClassName("closebtn")[0].style.visibility = "hidden";
       document.getElementById("mySidenav").style.width = "0";
-
+      NavState = 0;
     }
   </script>
 
