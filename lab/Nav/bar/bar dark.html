@@ -1,0 +1,264 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<style>
+    .dropdown-item,
+    .dropdown,
+    .disabled,
+    .nav-link {
+        cursor: pointer;
+        -webkit-touch-callout: none;
+        /* iOS Safari */
+        -webkit-user-select: none;
+        /* Safari */
+        -khtml-user-select: none;
+        /* Konqueror HTML */
+        -moz-user-select: none;
+        /* Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+        user-select: none;
+        /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+
+    }
+
+
+    .top-nav {
+        position: fixed;
+        width: 100%;
+
+    }
+
+    .navbar {
+        /*padding-top: 6px;
+        padding-bottom: 6px;
+        padding-left: 12px;
+        */
+        padding-right: 4px;
+    }
+
+    .custom-btn-icon {
+        width: 25px;
+        height: 25px;
+        padding-top: 0px;
+        padding-bottom: 4px;
+        padding-right: 4px;
+    }
+
+    .nav-item {
+        padding-right: 10px;
+    }
+
+    
+
+    /*=====================================================================*/
+    .navbar-dark .nav-item:hover .custom-btn-icon {
+        filter: invert(0.6);
+        transition: 0.5s;
+    }
+
+    .navbar-dark .nav-item .custom-btn-icon {
+        filter: invert(1);
+        transition: 0.5s;
+    }
+
+    .navbar.navbar-dark .nav-item:hover .nav-link {
+        filter: invert(0.4);
+        color: white;
+        transition: 0.5s;
+    }
+
+    .navbar.navbar-dark .nav-item .nav-link {
+        color: white;
+        transition: 0.5s;
+    }
+
+    /*=====================================================================*/
+    .navbar-light .nav-item:hover .custom-btn-icon {
+        filter: invert(0.8);
+        transition: 0.5s;
+    }
+
+    .navbar-light .nav-item .custom-btn-icon {
+        filter: invert(0);
+        transition: 0.5s;
+    }
+
+    .navbar.navbar-light .nav-item:hover .nav-link {
+        filter: invert(0.4);
+        color: black;
+        transition: 0.5s;
+    }
+
+    .navbar.navbar-light .nav-item .nav-link {
+        color: black;
+        transition: 0.5s;
+    }
+
+    /*=====================================================================*/
+
+    .custom-toggler.navbar-toggler:focus {
+        outline: rgb(0, 0, 0, 0);
+        
+    }
+
+    .custom-toggler.navbar-toggler {
+        border-color: rgb(0, 0, 0, 0);
+    }
+
+    .navbar-light .navbar-toggler-icon {
+        background-image: url("https://ionicons.com/ionicons/svg/ios-more.svg");
+
+        filter: invert(0);
+    }
+
+    .navbar-dark .navbar-toggler-icon {
+        background-image: url("https://ionicons.com/ionicons/svg/ios-more.svg");
+
+        filter: invert(1);
+    }
+</style>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+<body>
+
+    <div class="top-nav">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="navbar-brand">Navbar</div>
+            <button class="custom-toggler navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <div class="nav-link" onclick="javascript:window.location = 'http://www.google.com';">
+                            <img class="custom-btn-icon" src="https://ionicons.com/ionicons/svg/ios-home.svg">Home
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="nav-link" onclick="javascript:window.location = 'http://www.yahoo.com';">
+                            <img class="custom-btn-icon" src="https://ionicons.com/ionicons/svg/md-link.svg">Link
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <div class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img class="custom-btn-icon"
+                                src="https://ionicons.com/ionicons/svg/logo-dropbox.svg">Dropdown
+                        </div>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-item" onclick="javascript: window.location = 'http://www.google.com';">
+                                Action</div>
+                            <div class="dropdown-item">Another action</div>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-item">Something else here</div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link disabled">Disabled</div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0" style="padding-right: 10px;">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <div style="width: 100%;">
+        <br><br><br>dfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjd
+        fkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbj
+        dfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        bdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdf
+        klbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        dfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjd
+        fkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbj
+        dfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        bdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdf
+        klbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        dfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjd
+        fkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbj
+        dfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        bdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdf
+        klbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        dfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjd
+        fkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbj
+        dfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        bdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdf
+        klbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        dfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjd
+        fkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbj
+        dfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        bdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdf
+        klbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        dfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjd
+        fkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbj
+        dfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        bdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdf
+        klbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        dfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjd
+        fkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbj
+        dfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        bdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdf
+        klbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        dfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjd
+        fkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbj
+        dfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        bdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdf
+        klbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        dfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjd
+        fkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbj
+        dfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        bdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdf
+        klbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        dfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjd
+        fkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbj
+        dfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        bdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdf
+        klbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        dfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjd
+        fkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbj
+        dfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        bdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdf
+        klbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        dfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjd
+        fkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbj
+        dfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        bdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdf
+        klbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        dfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjd
+        fkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbj
+        dfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        bdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdf
+        klbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        dfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjd
+        fkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbj
+        dfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+        bdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdf
+        klbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
+
+    </div>
+</body>
+
+</html>
