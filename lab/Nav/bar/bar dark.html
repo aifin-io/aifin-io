@@ -30,12 +30,23 @@
 
     }
 
-
     .top-nav {
         position: fixed;
         width: 100%;
+        height: 100%;
+        z-index: 3;
+        overflow-y: scroll;
 
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        overflow-y: scroll;
+        scrollbar-width: none;
     }
+
+    .top-nav::-webkit-scrollbar {
+        display: none;
+    }
+
 
     .navbar {
         /*padding-top: 6px;
@@ -57,7 +68,7 @@
         padding-right: 10px;
     }
 
-    
+
 
     /*=====================================================================*/
     .navbar-dark .nav-item:hover .custom-btn-icon {
@@ -107,7 +118,7 @@
 
     .custom-toggler.navbar-toggler:focus {
         outline: rgb(0, 0, 0, 0);
-        
+
     }
 
     .custom-toggler.navbar-toggler {
@@ -125,6 +136,11 @@
 
         filter: invert(1);
     }
+
+    .start_offset {
+        background-color: rgba(0, 0, 0, 0.8);
+        height: 60px;
+    }
 </style>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -141,7 +157,7 @@
 
     <div class="top-nav">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="navbar-brand">Navbar</div>
+            <div class="navbar-brand">Benny Wong</div>
             <button class="custom-toggler navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -152,20 +168,20 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <div class="nav-link" onclick="javascript:window.location = 'http://www.google.com';">
-                            <img class="custom-btn-icon" src="https://ionicons.com/ionicons/svg/ios-home.svg">Home
+                            <img class="custom-btn-icon" src="https://ionicons.com/ionicons/svg/md-bowtie.svg">Intro
                         </div>
                     </li>
 
                     <li class="nav-item">
                         <div class="nav-link" onclick="javascript:window.location = 'http://www.yahoo.com';">
-                            <img class="custom-btn-icon" src="https://ionicons.com/ionicons/svg/md-link.svg">Link
+                            <img class="custom-btn-icon" src="https://ionicons.com/ionicons/svg/md-construct.svg">Skills
                         </div>
                     </li>
                     <li class="nav-item dropdown">
                         <div class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             <img class="custom-btn-icon"
-                                src="https://ionicons.com/ionicons/svg/logo-dropbox.svg">Dropdown
+                                src="https://ionicons.com/ionicons/svg/md-briefcase.svg">Experience
                         </div>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <div class="dropdown-item" onclick="javascript: window.location = 'http://www.google.com';">
@@ -183,11 +199,32 @@
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
                 </form>
+
+
+
             </div>
         </nav>
     </div>
     <div style="width: 100%;">
-        <br><br><br>dfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjd
+        <div class="start_offset"></div>
+        <!-- Default inline 1-->
+        <div class="custom-control custom-checkbox custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="defaultInline1">
+            <label class="custom-control-label" for="defaultInline1">1</label>
+        </div>
+
+        <!-- Default inline 2-->
+        <div class="custom-control custom-checkbox custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="defaultInline2">
+            <label class="custom-control-label" for="defaultInline2">2</label>
+        </div>
+
+        <!-- Default inline 3-->
+        <div class="custom-control custom-checkbox custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="defaultInline3">
+            <label class="custom-control-label" for="defaultInline3">3</label>
+        </div>
+        dfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjd
         fkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbj
         dfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
         bdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdf

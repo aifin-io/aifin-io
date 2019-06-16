@@ -34,7 +34,18 @@
     .top-nav {
         position: fixed;
         width: 100%;
+        height: 100%;
+        z-index: 3;
+        overflow-y: scroll;
 
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        overflow-y: scroll;
+        scrollbar-width: none;
+    }
+
+    .top-nav::-webkit-scrollbar {
+        display: none;
     }
 
     .navbar {
@@ -57,7 +68,7 @@
         padding-right: 10px;
     }
 
-    
+
 
     /*=====================================================================*/
     .navbar-dark .nav-item:hover .custom-btn-icon {
@@ -107,7 +118,7 @@
 
     .custom-toggler.navbar-toggler:focus {
         outline: rgb(0, 0, 0, 0);
-        
+
     }
 
     .custom-toggler.navbar-toggler {
@@ -187,7 +198,25 @@
         </nav>
     </div>
     <div style="width: 100%;">
-        <br><br><br>dfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjd
+        <br><br><br>
+        <!-- Default inline 1-->
+        <div class="custom-control custom-checkbox custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="defaultInline1">
+            <label class="custom-control-label" for="defaultInline1">1</label>
+        </div>
+
+        <!-- Default inline 2-->
+        <div class="custom-control custom-checkbox custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="defaultInline2">
+            <label class="custom-control-label" for="defaultInline2">2</label>
+        </div>
+
+        <!-- Default inline 3-->
+        <div class="custom-control custom-checkbox custom-control-inline">
+            <input type="checkbox" class="custom-control-input" id="defaultInline3">
+            <label class="custom-control-label" for="defaultInline3">3</label>
+        </div>
+        dfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjd
         fkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbj
         dfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfk
         bdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdfklbjdfkbdf
